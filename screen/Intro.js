@@ -82,7 +82,8 @@ export default class App extends React.Component {
       return <App />;
     } else {
       return <AppIntroSlider 
-                // dotStyle={{position:'absolute', top:'200'}}
+                // dotStyle={{fontSize:5}}
+                // keyExtractor={slides.key =()=> slides.key.toString()}//{item => item.index_id
                 renderItem={this._renderItem} 
                 data={slides} 
                 onDone={this._onDone}/>;
@@ -123,11 +124,13 @@ const styles = StyleSheet.create({
         backgroundColor:'#BCFCFF',
         marginHorizontal:50,
         borderRadius:20,
-        marginTop:110
+        marginTop:110,
+        justifyContent:'center'
 
     },
     buttonText:{
         fontSize:15,
+        fontWeight:'bold',
 
     }
     
