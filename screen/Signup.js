@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,StatusBar,ImageBackground, StyleSheet,} from 'react-native';
+import { View, Text,StatusBar,ImageBackground, StyleSheet, Touchable, TouchableOpacity,} from 'react-native';
 import ButtonDesign from '../component/ButtonDesign';
 
 export default function Signup({navigation}) {
@@ -22,12 +22,14 @@ export default function Signup({navigation}) {
                     <Text style={styles.descText} >Sign up to supercharge your</Text>
                     <Text style={styles.descText}> practice.</Text>
                 </View>
-
-                <ButtonDesign  dColor={'#BCFCFF'} aDesign={'mail'} tb={'Email'} />
-
-                <View style={styles.thinLIne}/>
-                <ButtonDesign dColor={'#252529'} aDesign={'apple-o'} tb={'Apple'} onPress={navigateSignup}/>
-                <ButtonDesign dColor={'#2C70DA'} aDesign={'facebook-square'} tb={'Facebook'}></ButtonDesign> 
+                <TouchableOpacity onPress={navigateSignup} style={styles.importantContainer} >
+                    <View style={styles.importantContainer} >
+                    <ButtonDesign  dColor={'#BCFCFF'} aDesign={'mail'} tb={'Continue with Email'} onPress={navigateSignup}/>
+                    <View style={styles.thinLIne}/>
+                    <ButtonDesign dColor={'#252529'} aDesign={'apple-o'} tb={'Continue with Apple'} onPress={navigateSignup}/>
+                    <ButtonDesign dColor={'#2C70DA'} aDesign={'facebook-square'} tb={'Continue with Facebook'}></ButtonDesign> 
+                    </View>
+                </TouchableOpacity>
             </ImageBackground>   
         </View>
     )
@@ -72,5 +74,8 @@ const styles=StyleSheet.create({
         marginHorizontal:60,
         marginTop:20,
         opacity:0.5,
+    },
+    importantContainer:{
+        zIndex:1,
     }
 })
