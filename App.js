@@ -12,7 +12,12 @@ import SignupField from './screen/SignupField';
 import ResetPassowrd from './screen/ResetPassowrd';
 import AllowNotification from './screen/AllowNotification';
 import ProfileSetupName from './screen/ProfileSetupName';
-
+import Welcome from './screen/Welcome';
+import ProfileGender from './screen/ProfileGender';
+import ProfileLevel from './screen/ProfileLevel'; 
+import ProfilePains from './screen/ProfilePains';
+import ProfileGoal from './screen/ProfileGoal';
+import CameraAccess from './screen/CameraAccess';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +27,8 @@ export default function App() {
       <Stack.Navigator screenOptions={{
         headerShown: false
       }}>
+        
+        
         <Stack.Screen name="Intro" component={Intro} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Login" component={Login} />
@@ -29,6 +36,12 @@ export default function App() {
         <Stack.Screen name="ResetPassword" component={ResetPassowrd} />
         <Stack.Screen name="AllowNotification" component={AllowNotification} />
         <Stack.Screen name="ProfileSetupName" component={ProfileSetupName} />
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="ProfileGender" component={ProfileGender} />
+        <Stack.Screen name="ProfileLevel" component={ProfileLevel} />
+        <Stack.Screen name="ProfilePains" component={ProfilePains} />
+        <Stack.Screen name="ProfileGoal" component={ProfileGoal} />
+        <Stack.Screen name="CameraAccess" component={CameraAccess} />
       </Stack.Navigator>
     </NavigationContainer>
    

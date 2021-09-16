@@ -3,7 +3,10 @@ import { View, Text, StatusBar,StyleSheet,TextInput } from 'react-native';
 import ButtonDesign from '../component/ButtonDesign';
 
 
-export default function ProfileSetupName() {
+export default function ProfileSetupName({navigation}) {
+    const navigateWelcome=()=>{
+        navigation.navigate('Welcome')
+    }
     return (
         <View style={styles.container}>
             <StatusBar barStyle = "dark-content" hidden = {false} translucent backgroundColor="transparent"/>
@@ -16,7 +19,7 @@ export default function ProfileSetupName() {
                 <View style={styles.thinLIne} />
             </View>
             <View style={styles.buttonContainer} >
-                <ButtonDesign dColor={'#BCFCFF'} tb={'Next'} />
+                <ButtonDesign dColor={'#BCFCFF'} tb={'Next'} onPress={navigateWelcome} />
             </View>
             
         </View>

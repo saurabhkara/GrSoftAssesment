@@ -6,6 +6,9 @@ export default function SignupField({navigation}) {
     const navigateWelcome=()=>{
         navigation.navigate('AllowNotification')
     }
+    const navigateSetUpName=()=>{
+        navigation.navigate('ProfileSetupName')
+    }
     return (
         <View>
              <StatusBar barStyle = "dark-content" hidden = {false} translucent backgroundColor="transparent"/>
@@ -33,7 +36,7 @@ export default function SignupField({navigation}) {
                     <TextInput style={styles.m} placeholder='Password' />
                     <View style={styles.thinLIneSEC}/>
                 </View>
-                <ButtonDesign dColor={'#BCFCFF'} tb={'Sign Up'} onpress={navigateWelcome}/>
+                <ButtonDesign dColor={'#BCFCFF'} tb={'Sign Up'} onPress={navigateSetUpName}/>
                 <View style={styles.signUpText} >
                     <Text >By signing up you agree to our Terms of </Text>
                     <Text>Use and Privacy Policy</Text>

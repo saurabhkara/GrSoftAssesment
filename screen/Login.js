@@ -24,7 +24,7 @@ export default function Login({navigation}) {
                     <Text onPress={navigateForget} style={{position:'absolute',right:15, top:130, opacity:0.4}}>Forgot password?</Text>
                 </View>
                 <View style={styles.buttonConatiner}>
-                <ButtonDesign dColor={'#BCFCFF'} aDesign={'mail'} tb={'Continue with Email'} onpress={navigateSignup}/>
+                <ButtonDesign dColor={'#BCFCFF'} aDesign={'mail'} tb={'Continue with Email'} onPress={navigateSignup}/>
                 <Text 
                 style={{marginHorizontal:50, opacity:0.4, marginTop:15}}
                 >-------------------------------- or ----------------------------------</Text>

@@ -3,10 +3,10 @@ import { View,Text, TouchableOpacity ,StyleSheet} from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 
 
-export default function ButtonDesign({dColor,aDesign,tb,onpress}) {
+export default function ButtonDesign({dColor,aDesign,tb,onPress}) {
 
     return (
-        <TouchableOpacity style={[styles.container,{backgroundColor:dColor,marginTop:20}]} onPress={onpress} >
+        <TouchableOpacity style={[styles.container,{backgroundColor:dColor,marginTop:20}]} onPress={onPress} >
             <AntDesign name={aDesign} size={24} color="white" />
             <Text style={styles.text}>{tb}</Text>
         </TouchableOpacity>
